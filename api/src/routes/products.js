@@ -14,6 +14,7 @@ const {
     editProduct,
     putReview,
     cartCheckout,
+    webhook,
 } = require('../controllers/products');
 
 productsRouter.get('/getAll', getAllProducts);
@@ -26,7 +27,8 @@ productsRouter.post('/buy', buyProduct);
 productsRouter.delete('/delete', deleteProduct);
 productsRouter.get('/product/:id', getProductsById);
 productsRouter.get('/getCategories', getCategories);
-productsRouter.put('/putReview/:id', putReview)
-productsRouter.post('/checkout', cartCheckout)
+productsRouter.put('/putReview/:id', putReview);
+productsRouter.post('/checkout', cartCheckout);
+productsRouter.post('/MecadoLibreResponse', webhook);
 
 module.exports = productsRouter;
